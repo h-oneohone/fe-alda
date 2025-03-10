@@ -1,0 +1,133 @@
+.chat-box {
+  background-color: rgba(115, 115, 115, 0.55);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 86vh;
+  min-height: 86vh;
+  width: 39rem;
+  box-shadow: rgba(17, 12, 46, 0.4) 0px 48px 100px 0px;
+}
+
+.messages-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  margin-top: 2.4rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+.messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Handle */
+.messages-container::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #e9ecef;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat-box .message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  max-width: 80%;
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.avatar {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-self: flex-end;
+  bottom: -12%;
+}
+
+.user-message .avatar {
+  order: 2;
+  right: -10%;
+}
+.other-message .avatar {
+  margin-right: 0.2rem;
+  left: -10%;
+}
+
+.user-message {
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 2.4rem;
+}
+
+.other-message {
+  justify-content: flex-start;
+  margin-right: auto;
+  margin-left: 2.4rem;
+}
+
+.text-and-time {
+  background-color: #e9ecef;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: black;
+  flex-grow: 1;
+}
+
+.user-message .text-and-time {
+  background-color: #38393a; /* Blue background for user messages */
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.other-message .text-and-time {
+  background-color: #f9f9f9; /* Lighter gray for other messages */
+  color: black;
+  border-bottom-left-radius: 0;
+}
+
+.timestamp {
+  display: block;
+  font-size: 0.75em;
+  margin-top: 5px;
+  opacity: 0.6;
+}
+
+.message-form {
+  display: flex;
+  padding: 10px;
+}
+
+.form-control {
+  flex-grow: 1;
+  margin-right: 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: #737373;
+  background-color: #f9f9f9;
+}
+
+/* Change focus styles for inputs */
+.form-control:focus {
+  border-color: #38393a; /* Lighter border color when focused */
+  box-shadow: 0 0 0 0.2rem rgba(56, 57, 58, 0.3); /* Same box shadow as default */
+}
+
+.send-button {
+  margin-bottom: 12px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.send-button:hover {
+  background-color: #737373 !important;
+  color: #fff !important;
+}
