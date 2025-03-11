@@ -153,10 +153,10 @@ const Video = ({
 
     // Create an instance of SrsRtcWhipWhepAsync
     const sdk = new SrsRtcWhipWhepAsync();
-    // wsRef.current = new WebSocket(`ws://10.170.100.152:8000/human`);
-    // Define your stream URL
+    
+    // Sử dụng HTTPS thay vì HTTP cho stream URL
     const streamUrl =
-      'http://10.170.100.152:1985/rtc/v1/whep/?app=live&stream=livestream';
+      'https://10.170.100.152:1985/rtc/v1/whep/?app=live&stream=livestream';
 
     // Start playing the WebRTC stream using the sdk
     sdk
